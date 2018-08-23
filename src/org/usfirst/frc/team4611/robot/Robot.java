@@ -17,7 +17,7 @@ public class Robot extends IterativeRobot {
 	
 	Command autonomousCommand;
 	SendableChooser<Command> chooser = new SendableChooser<>();
-	public IMecanum mecanum;
+	public static IMecanum mecanum;
 	
 	@Override
 	public void robotInit() {

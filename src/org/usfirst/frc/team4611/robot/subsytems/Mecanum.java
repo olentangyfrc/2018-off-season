@@ -11,7 +11,10 @@ public class Mecanum extends Subsystem implements IMecanum{
 	private Victor backRight = new Victor(3);
 	
 	public void moveForward(double speed) {
-		
+		frontLeft.set(speed);
+		frontRight.set(speed);
+		backLeft.set(speed);
+		backRight.set(speed);
 	}
 	
 	public void moveBackward(double speed) {
