@@ -1,0 +1,10 @@
+/bin/*
+/build*
+/dist/*
+/*.class/
+/*.jar/
+/*.xml/
+/*.properties/
+/.classpath
+/.project
+/bin/

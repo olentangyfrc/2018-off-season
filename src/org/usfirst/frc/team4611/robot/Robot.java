@@ -4,7 +4,7 @@ package org.usfirst.frc.team4611.robot;
 import java.util.HashMap;
 
 import org.usfirst.frc.team4611.robot.subsytems.IMecanum;
-import org.usfirst.frc.team4611.robot.subsytems.Mecanum;
+import org.usfirst.frc.team4611.robot.subsytems.vMecanum;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
@@ -22,7 +22,7 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void robotInit() {
 		//Initialize the subsystems
-		mecanum = new Mecanum();
+		mecanum = new vMecanum();
 	}
 
 	@Override
