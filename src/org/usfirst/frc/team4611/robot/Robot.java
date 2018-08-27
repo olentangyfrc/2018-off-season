@@ -3,7 +3,7 @@ package org.usfirst.frc.team4611.robot;
 
 import java.util.HashMap;
 
-import org.usfirst.frc.team4611.robot.subsytems.IMecanum;
+import org.usfirst.frc.team4611.robot.subsytems.iMecanum;
 import org.usfirst.frc.team4611.robot.subsytems.vMecanum;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
@@ -17,7 +17,7 @@ public class Robot extends IterativeRobot {
 	
 	Command autonomousCommand;
 	SendableChooser<Command> chooser = new SendableChooser<>();
-	public IMecanum mecanum;
+	public iMecanum mecanum;
 	
 	@Override
 	public void robotInit() {

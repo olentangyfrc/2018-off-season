@@ -3,7 +3,7 @@ package org.usfirst.frc.team4611.robot.subsytems;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
-public class vMecanum extends Subsystem implements IMecanum{
+public class vMecanum extends Subsystem implements iMecanum{
 	
 	private Victor frontLeft = new Victor(0);
 	private Victor frontRight = new Victor(1);
