@@ -20,18 +20,15 @@ public class Robot extends IterativeRobot {
 	Command autonomousCommand;
 	SendableChooser<Command> chooser = new SendableChooser<>();
 	public static Mecanum mecanum;
-	public Mecanum mec;
 	
 	@Override
 	public void robotInit() {
 		//Initialize the subsystems
 		if(motorControllerType.toLowerCase().equals("t")) {
 			mecanum = new tMecanum();
-			mec = (tMecanum)mec;
 		}
 		else {
 			mecanum = new vMecanum();
-			mec = (vMecanum)mec;
 		}
 	}
 

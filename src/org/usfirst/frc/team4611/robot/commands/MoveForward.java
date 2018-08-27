@@ -12,7 +12,7 @@ public class MoveForward extends Command {
 	}
 	
 	protected void execute() {
-		((iMecanum)Robot.mecanum).moveForward(1);
+		Robot.mecanum.moveForward(1);
 	}
 
 	@Override
