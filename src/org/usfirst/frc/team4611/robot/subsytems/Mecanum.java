@@ -9,5 +9,7 @@ public abstract class Mecanum extends Subsystem implements iMecanum{
 		// TODO Auto-generated method stub
 		
 	}
+	
+	public abstract void move(double speed);
 
 }

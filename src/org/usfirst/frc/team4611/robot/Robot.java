@@ -20,6 +20,7 @@ public class Robot extends IterativeRobot {
 	Command autonomousCommand;
 	SendableChooser<Command> chooser = new SendableChooser<>();
 	public static Mecanum mecanum;
+	public static OI oi;
 	
 	@Override
 	public void robotInit() {
@@ -30,6 +31,7 @@ public class Robot extends IterativeRobot {
 		else {
 			mecanum = new vMecanum();
 		}
+		oi = new OI();
 	}
 
 	@Override

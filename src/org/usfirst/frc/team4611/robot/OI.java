@@ -1,6 +1,8 @@
 package org.usfirst.frc.team4611.robot;
 
+import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.buttons.Button;
 
 
@@ -11,9 +13,11 @@ import edu.wpi.first.wpilibj.buttons.Button;
  */
 
 public class OI {
+	public static XboxController con = new XboxController(0);
+	
 	
 	public OI (){
-	
+		
 	}
 	
 	public static double generalJoystickFilter(double raw) //We pass joystick values through the filter here and edit the raw value
@@ -24,4 +28,5 @@ public class OI {
             return  raw * (1); //Set the output to a ceratin percent of of the input
         }
     }
+	
 }

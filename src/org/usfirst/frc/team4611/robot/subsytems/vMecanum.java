@@ -28,5 +28,11 @@ public class vMecanum extends Mecanum implements iMecanum{
 	protected void initDefaultCommand() {
 		
 	}
+
+	@Override
+	public void move(double speed) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
