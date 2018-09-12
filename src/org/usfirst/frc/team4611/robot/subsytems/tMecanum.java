@@ -9,7 +9,7 @@ import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
-public class tMecanum extends Mecanum {
+public class tMecanum extends Subsystem implements iMecanum {
 	
 	private int maxRPM = 1200;
 	
@@ -44,13 +44,11 @@ public class tMecanum extends Mecanum {
 		
 	}
 
-	@Override
 	public void moveForward(double speed) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void move(double speed) {
 		double YVal = -Robot.oi.generalJoystickFilter(OI.leftJoy.getY()); 
 		double XVal = Robot.oi.generalJoystickFilter(OI.leftJoy.getX());

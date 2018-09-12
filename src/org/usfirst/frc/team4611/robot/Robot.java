@@ -3,7 +3,6 @@ package org.usfirst.frc.team4611.robot;
 
 import java.util.HashMap;
 
-import org.usfirst.frc.team4611.robot.subsytems.Mecanum;
 import org.usfirst.frc.team4611.robot.subsytems.iMecanum;
 import org.usfirst.frc.team4611.robot.subsytems.tMecanum;
 import org.usfirst.frc.team4611.robot.subsytems.vMecanum;
@@ -19,7 +18,7 @@ public class Robot extends IterativeRobot {
 	public String motorControllerType;
 	Command autonomousCommand;
 	SendableChooser<Command> chooser = new SendableChooser<>();
-	public static Mecanum mecanum;
+	public static iMecanum mecanum;
 	public static OI oi;
 	
 	@Override

@@ -3,7 +3,7 @@ package org.usfirst.frc.team4611.robot.subsytems;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
-public class vMecanum extends Mecanum implements iMecanum{
+public class vMecanum extends Subsystem implements iMecanum{
 	
 	private Victor frontLeft = new Victor(0);
 	private Victor frontRight = new Victor(1);
@@ -29,7 +29,6 @@ public class vMecanum extends Mecanum implements iMecanum{
 		
 	}
 
-	@Override
 	public void move(double speed) {
 		// TODO Auto-generated method stub
 		
