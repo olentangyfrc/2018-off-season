@@ -13,11 +13,12 @@ import edu.wpi.first.wpilibj.buttons.Button;
  */
 
 public class OI {
-	public static XboxController con = new XboxController(0);
-	
+	public static Joystick leftJoy;
+	public static Joystick rightJoy;
 	
 	public OI (){
-		
+		leftJoy = new Joystick(0); //The left joystick exists on this port in robot map
+		rightJoy = new Joystick(1); //The right joystick exists on this port in robot map
 	}
 	
 	public static double generalJoystickFilter(double raw) //We pass joystick values through the filter here and edit the raw value

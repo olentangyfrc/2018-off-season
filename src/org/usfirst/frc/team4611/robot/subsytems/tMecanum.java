@@ -18,9 +18,7 @@ public class tMecanum extends Mecanum {
 	private WPI_TalonSRX backLeft = new WPI_TalonSRX(2);
 	private WPI_TalonSRX backRight = new WPI_TalonSRX(3);
 	
-	private double YVal = -OI.generalJoystickFilter(OI.con.getY()); 
-	private double XVal = OI.generalJoystickFilter(OI.con.getX());
-	private double ZVal = OI.generalJoystickFilter(OI.con.getX());
+	
 	private double velocity1;
 	private double velocity2;
 	private double velocity3;
@@ -42,7 +40,6 @@ public class tMecanum extends Mecanum {
 		
 	}
 	
-	@Override
 	protected void initDefaultCommand() {
 		
 	}
@@ -55,7 +52,10 @@ public class tMecanum extends Mecanum {
 
 	@Override
 	public void move(double speed) {
-		
+		double YVal = -Robot.oi.generalJoystickFilter(OI.leftJoy.getY()); 
+		double XVal = Robot.oi.generalJoystickFilter(OI.leftJoy.getX());
+		double ZVal = Robot.oi.generalJoystickFilter(OI.rightJoy.getX());
+	
 		velocity1 = 4*(maxRPM * (YVal * YValScaler1 + XVal * XValScaler1 + ZVal * ZValScaler) * (velocityInvert1));
 		velocity2 = 4*(maxRPM * (YVal * YValScaler2 - XVal * XValScaler2 - ZVal * ZValScaler) * (velocityInvert2)); 
 		velocity3 = 4*(maxRPM * (YVal * YValScaler2 + XVal * XValScaler2 - ZVal * ZValScaler) * (velocityInvert3));
